@@ -1,0 +1,14 @@
+LOADC 10
+LOADA 0
+LOADB 1
+: increment
+IF A C JMP reset
+ADD B A
+LOADA "MathOp"
+STORE A
+SHIFTRIGHT
+JMP increment
+
+: reset
+PRINT exiting...
+
